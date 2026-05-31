@@ -5,13 +5,16 @@ package.domain = org.caiehelp
 source.dir = .
 source.include_exts = py
 
-# CHANGED: Replaced explicit strict sub-versions with clean target names
+# Crucial app identification lines
+version = 1.0
+
+# Clean target dependencies 
 requirements = python3,kivy,pillow
 
 orientation = portrait
 fullscreen = 0
 
-# Fixed deployment variables matching the GitHub Actions Environment
+# Deployment variables matching the GitHub Environment
 android.api = 33
 android.minapi = 24
 android.ndk_api = 24
