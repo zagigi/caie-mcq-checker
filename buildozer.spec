@@ -4,12 +4,17 @@ package.name = mcqchecker
 package.domain = org.caiehelp
 source.dir = .
 source.include_exts = py
-version = 0.1
-requirements = python3,kivy==2.3.0
+
+# Crucial version dependencies 
+version = 1.0
+requirements = python3==3.10.12,kivy==2.3.0,kivymd==1.2.0,pillow
+
 orientation = portrait
-osx.kivy_version = 2.3.0
 fullscreen = 0
 android.archs = arm64-v8a
+
+# Necessary build permissions
+android.permissions = INTERNET, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 
 [buildozer]
 log_level = 2
