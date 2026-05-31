@@ -24,7 +24,6 @@ jobs:
         pip install buildozer cython virtualenv
 
     - name: Fix Android SDK Tool Path Mismatch
-      # This step creates the legacy directory path layout that Buildozer expects
       run: |
         mkdir -p /usr/local/lib/android/sdk/tools/bin
         if [ -f "/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager" ]; then
@@ -35,7 +34,6 @@ jobs:
       run: |
         echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
         echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
-        echo "ANDROID_NDK_HOME=/usr/local/lib/android/sdk/ndk/27.3.13750724" >> $GITHUB_ENV
 
     - name: Build with Buildozer
       run: yes | buildozer android debug
