@@ -11,10 +11,10 @@ requirements = python3,kivy,pillow
 orientation = portrait
 fullscreen = 0
 
+# Let Buildozer manage the NDK to avoid compilation drops, but hook into the runner's SDK
 android.sdk_path = /usr/local/lib/android/sdk
-android.ndk_path = /usr/local/lib/android/sdk/ndk/27.3.13750724
 
-android.api = 34
+android.api = 33
 android.minapi = 24
 android.ndk_api = 24
 android.archs = arm64-v8a
