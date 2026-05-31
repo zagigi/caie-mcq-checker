@@ -5,12 +5,16 @@ package.domain = org.caiehelp
 source.dir = .
 source.include_exts = py
 
-# Crucial version dependencies 
-version = 1.0
-requirements = python3==3.10.12,kivy==2.3.0,kivymd==1.2.0,pillow
+# CHANGED: Replaced explicit strict sub-versions with clean target names
+requirements = python3,kivy,pillow
 
 orientation = portrait
 fullscreen = 0
+
+# Fixed deployment variables matching the GitHub Actions Environment
+android.api = 33
+android.minapi = 24
+android.ndk_api = 24
 android.archs = arm64-v8a
 
 # Necessary build permissions
